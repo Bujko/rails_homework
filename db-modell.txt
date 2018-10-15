@@ -1,0 +1,26 @@
+User
+	Id
+	Name
+	Email
+	Password
+	Salt
+
+Stylist
+	Id	
+	Name
+	Email
+	Password
+	Salt
+
+Cloth
+	Id
+	User_id
+	Picture
+
+Set
+	User_id
+	Stylist_id
+	Shoes_id
+	Trouser_id
+	Shirt_id
+	Checked

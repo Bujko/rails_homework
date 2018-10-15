@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectStyle</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div id = "page">
+
+	<div id = "head">
+	<h1> Project style </h1>
+	</div>
+
+	<div id = "menu">
+
+	</div>
+
+	<div id = "main">
+	    <%= yield %>
+	</div>
+	<div id = "footer">
+
+	</div>
+
+      </div>
+  </body>
+</html>
