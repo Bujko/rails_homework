@@ -4,9 +4,10 @@ User
 	Email
 	Password
 	Salt
+	Usertype
 
 Stylist
-	Id	
+	Id
 	Name
 	Email
 	Password

@@ -10,10 +10,79 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
-#main {
+
+
+
+
+ @font-face {
+ font-family: 'Style';
+ src: url('UbuntuMono-R.ttf') format('truetype');
+ }
+
+
+#page {
+	width:95%;
+	min-height: 800 px;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#head {
+	width : 100%;
+	border-style : solid;
+	border-width: 5px;
+	margin-left: auto;
+	margin-right:auto;
+	font-family: 'Style';
+	text-align:center;
+	vertical-align:middle;
+	font-size: 300%;
+}
+
+#menu {
+	width: 100%;
+	height: 20px;
 	
+}
+
+#menu ul {
+	  color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+	  text-align: center;
+	padding-bottom: 100px;
+}
+
+#menu li {
+    display:inline;
+}
+
+#menu li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+	 
+}
+
+/* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+    background-color: black;
+	   color:white;
+}
+
+#main {
+
+}
+
+#footer {
+
 }

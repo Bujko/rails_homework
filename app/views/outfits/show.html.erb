@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @outfit.user_id %>
+</p>
+
+<p>
+  <strong>Stylist:</strong>
+  <%= @outfit.stylist_id %>
+</p>
+
+<p>
+  <strong>Shoes:</strong>
+  <%= @outfit.shoes_id %>
+</p>
+
+<p>
+  <strong>Trousers:</strong>
+  <%= @outfit.trousers_id %>
+</p>
+
+<p>
+  <strong>Shirt:</strong>
+  <%= @outfit.shirt_id %>
+</p>
+
+<p>
+  <strong>Checked:</strong>
+  <%= @outfit.checked %>
+</p>
+
+<%= link_to 'Edit', edit_outfit_path(@outfit) %> |
+<%= link_to 'Back', outfits_path %>

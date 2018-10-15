@@ -12,12 +12,20 @@
   <body>
       <div id = "page">
 
+
+
 	<div id = "head">
-	<h1> Project style </h1>
+	<p>:~$ project_style </p>
 	</div>
 
 	<div id = "menu">
-
+    <% if logged_in? %>
+      <% if is_user? %>
+        <%= render 'layouts/user_menu' %>
+      <% else %>
+        <%= render 'layouts/stylist_menu' %>
+      <% end %>
+    <% end %>
 	</div>
 
 	<div id = "main">
