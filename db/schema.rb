@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_192355) do
+ActiveRecord::Schema.define(version: 2018_10_17_211325) do
 
   create_table "cloths", force: :cascade do |t|
     t.integer "user_id"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 2018_10_15_192355) do
     t.integer "stylist_id"
     t.integer "shoes_id"
     t.integer "trousers_id"
-    t.integer "shirt_id"
-    t.integer "checked"
+    t.string "shirt_id"
+    t.integer "integer_checked"
+    t.string "type"
+    t.string "season"
+    t.string "name"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

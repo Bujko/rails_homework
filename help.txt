@@ -1,0 +1,7 @@
+rails generate migration DropInstalls
+
+class DropInstalls < ActiveRecord::Migration
+  def change
+    drop_table :installs
+  end
+end
