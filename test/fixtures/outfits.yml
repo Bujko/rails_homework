@@ -5,13 +5,21 @@ one:
   stylist_id: 1
   shoes_id: 1
   trousers_id: 1
-  shirt_id: 1
-  checked: 1
+  shirt_id: MyString
+  integer_checked: 1
+  type: 
+  season: MyString
+  name: MyString
+  comment: MyString
 
 two:
   user_id: 1
   stylist_id: 1
   shoes_id: 1
   trousers_id: 1
-  shirt_id: 1
-  checked: 1
+  shirt_id: MyString
+  integer_checked: 1
+  type: 
+  season: MyString
+  name: MyString
+  comment: MyString

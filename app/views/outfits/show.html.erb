@@ -26,8 +26,28 @@
 </p>
 
 <p>
-  <strong>Checked:</strong>
-  <%= @outfit.checked %>
+  <strong>Integer checked:</strong>
+  <%= @outfit.integer_checked %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @outfit.type %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @outfit.season %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @outfit.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @outfit.comment %>
 </p>
 
 <%= link_to 'Edit', edit_outfit_path(@outfit) %> |

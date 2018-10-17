@@ -14,11 +14,15 @@ class OutfitsTest < ApplicationSystemTestCase
     visit outfits_url
     click_on "New Outfit"
 
-    fill_in "Checked", with: @outfit.checked
+    fill_in "Comment", with: @outfit.comment
+    fill_in "Integer Checked", with: @outfit.integer_checked
+    fill_in "Name", with: @outfit.name
+    fill_in "Season", with: @outfit.season
     fill_in "Shirt", with: @outfit.shirt_id
     fill_in "Shoes", with: @outfit.shoes_id
     fill_in "Stylist", with: @outfit.stylist_id
     fill_in "Trousers", with: @outfit.trousers_id
+    fill_in "Type", with: @outfit.type
     fill_in "User", with: @outfit.user_id
     click_on "Create Outfit"
 
@@ -30,11 +34,15 @@ class OutfitsTest < ApplicationSystemTestCase
     visit outfits_url
     click_on "Edit", match: :first
 
-    fill_in "Checked", with: @outfit.checked
+    fill_in "Comment", with: @outfit.comment
+    fill_in "Integer Checked", with: @outfit.integer_checked
+    fill_in "Name", with: @outfit.name
+    fill_in "Season", with: @outfit.season
     fill_in "Shirt", with: @outfit.shirt_id
     fill_in "Shoes", with: @outfit.shoes_id
     fill_in "Stylist", with: @outfit.stylist_id
     fill_in "Trousers", with: @outfit.trousers_id
+    fill_in "Type", with: @outfit.type
     fill_in "User", with: @outfit.user_id
     click_on "Update Outfit"
 

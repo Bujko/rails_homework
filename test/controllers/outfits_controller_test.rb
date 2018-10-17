@@ -17,7 +17,7 @@ class OutfitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create outfit" do
     assert_difference('Outfit.count') do
-      post outfits_url, params: { outfit: { checked: @outfit.checked, shirt_id: @outfit.shirt_id, shoes_id: @outfit.shoes_id, stylist_id: @outfit.stylist_id, trousers_id: @outfit.trousers_id, user_id: @outfit.user_id } }
+      post outfits_url, params: { outfit: { comment: @outfit.comment, integer_checked: @outfit.integer_checked, name: @outfit.name, season: @outfit.season, shirt_id: @outfit.shirt_id, shoes_id: @outfit.shoes_id, stylist_id: @outfit.stylist_id, trousers_id: @outfit.trousers_id, type: @outfit.type, user_id: @outfit.user_id } }
     end
 
     assert_redirected_to outfit_url(Outfit.last)
@@ -34,7 +34,7 @@ class OutfitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update outfit" do
-    patch outfit_url(@outfit), params: { outfit: { checked: @outfit.checked, shirt_id: @outfit.shirt_id, shoes_id: @outfit.shoes_id, stylist_id: @outfit.stylist_id, trousers_id: @outfit.trousers_id, user_id: @outfit.user_id } }
+    patch outfit_url(@outfit), params: { outfit: { comment: @outfit.comment, integer_checked: @outfit.integer_checked, name: @outfit.name, season: @outfit.season, shirt_id: @outfit.shirt_id, shoes_id: @outfit.shoes_id, stylist_id: @outfit.stylist_id, trousers_id: @outfit.trousers_id, type: @outfit.type, user_id: @outfit.user_id } }
     assert_redirected_to outfit_url(@outfit)
   end
 

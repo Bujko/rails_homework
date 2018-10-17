@@ -18,6 +18,9 @@
 	<p>:~$ project_style </p>
 	</div>
 
+  <br>
+  <hr>
+
 	<div id = "menu">
     <% if logged_in? %>
       <% if is_user? %>
@@ -28,8 +31,21 @@
     <% end %>
 	</div>
 
+  <br>
+  <hr>
+
+
 	<div id = "main">
-	    <%= yield %>
+
+    <% if logged_in? %>
+
+       <%= yield %>
+
+    <% else %>
+
+	       <%= render 'layouts/loginform' %>
+
+    <% end %>
 	</div>
 	<div id = "footer">
 
