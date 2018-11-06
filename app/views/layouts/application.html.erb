@@ -29,7 +29,7 @@
         <%= render 'layouts/stylist_menu' %>
       <% end %>
     <%else%>
-    
+
     <% end %>
 	</div>
 
@@ -39,7 +39,7 @@
 
 	<div id = "main">
 
-    <% if logged_in? %>
+    <% if logged_in? || request.env['PATH_INFO'] == "/users/new"%>
 
        <%= yield %>
 
