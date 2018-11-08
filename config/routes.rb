@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  post 'sessions/create', to: 'sessions#create', as: 'login'
+  get 'sessions/destroy', to: 'sessions#destroy', as: 'logout'
   resources :outfits
   resources :cloths
   resources :users
