@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def is_user?
-    true
+    session[:usertype] == 0 
   end
 end

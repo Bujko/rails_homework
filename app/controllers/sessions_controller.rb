@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     @user = User.authenticate params[:email], params[:password]
     if @user
       session[:user] = @user.id
+      session[:usertype] = @user.usertype
       redirect_back fallback_location: root_path
     else
       flash[:notice] = "Invalid e-mail address or password"

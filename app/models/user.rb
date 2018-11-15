@@ -1,9 +1,17 @@
 class User < ApplicationRecord
+  has_many :cloths
+  has_many :outfits
   before_save :encrypt_password
-  #attr_accessor :password
+  attr_accessor :password , :password_confirmation
+
+  # enum usertype: [:user, :stylist]
+
+  validates :name, presence: true
+  validates :email, {presence: true, uniqueness: true}
+  validates :password, confirmation: true, if: :password_reqired?
 
   def User.encrypt(pass, salt)
-    Digest::SHA1.hexdigest(salt+pass)
+    Digest::SHA1.hexdigest(salt + pass)
   end
 
   def encrypt_password
@@ -11,7 +19,7 @@ class User < ApplicationRecord
     if new_record?
       self.salt = SecureRandom.base64 8
     end
-    self.password = User.encrypt(password,salt)
+    self.encrypted_password = User.encrypt(password,salt)
   end
 
   def User.authenticate(email, pass)
@@ -20,6 +28,10 @@ class User < ApplicationRecord
   end
 
   def authenticated?(pass)
-    self.password == User.encrypt(pass, self.salt)
+    self.encrypted_password == User.encrypt(pass, self.salt)
+  end
+
+  def password_reqired?
+    new_record? || !self.password.blank?
   end
 end

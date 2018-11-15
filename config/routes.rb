@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'users/new', to: 'users#new', as: 'register'
+  post 'users/create'
+
+  get 'users/edit/:id', to: 'useres#edit', as: 'edit_profile'
+  put 'users/update/:id', to: 'users#update', as: 'update_profile'
+
+  get 'users/forgotten'
+  post 'users/send_forgotten'
+
+  delete 'users/destroy'
+
+  get 'users/show/:id', to: 'users#show', as: 'profile'
 
   post 'sessions/create', to: 'sessions#create', as: 'login'
   get 'sessions/destroy', to: 'sessions#destroy', as: 'logout'
