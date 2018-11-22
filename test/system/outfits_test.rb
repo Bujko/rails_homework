@@ -19,9 +19,9 @@ class OutfitsTest < ApplicationSystemTestCase
     fill_in "Name", with: @outfit.name
     fill_in "Season", with: @outfit.season
     fill_in "Shirt", with: @outfit.shirt_id
-    fill_in "Shoes", with: @outfit.shoes_id
+    fill_in "Shoes", with: @outfit.shoe_id
     fill_in "Stylist", with: @outfit.stylist_id
-    fill_in "Trousers", with: @outfit.trousers_id
+    fill_in "Trousers", with: @outfit.trouser_id
     fill_in "Type", with: @outfit.type
     fill_in "User", with: @outfit.user_id
     click_on "Create Outfit"
@@ -39,9 +39,9 @@ class OutfitsTest < ApplicationSystemTestCase
     fill_in "Name", with: @outfit.name
     fill_in "Season", with: @outfit.season
     fill_in "Shirt", with: @outfit.shirt_id
-    fill_in "Shoes", with: @outfit.shoes_id
+    fill_in "Shoes", with: @outfit.shoe_id
     fill_in "Stylist", with: @outfit.stylist_id
-    fill_in "Trousers", with: @outfit.trousers_id
+    fill_in "Trousers", with: @outfit.trouser_id
     fill_in "Type", with: @outfit.type
     fill_in "User", with: @outfit.user_id
     click_on "Update Outfit"

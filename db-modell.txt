@@ -21,7 +21,7 @@ Cloth
 Set
 	User_id
 	Stylist_id
-	Shoes_id
+	shoe_id
 	Trouser_id
 	Shirt_id
 	Checked

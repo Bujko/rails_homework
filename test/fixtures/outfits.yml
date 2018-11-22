@@ -3,8 +3,8 @@
 one:
   user_id: 1
   stylist_id: 1
-  shoes_id: 1
-  trousers_id: 1
+  shoe_id: 1
+  trouser_id: 1
   shirt_id: MyString
   integer_checked: 1
   type: 
@@ -15,8 +15,8 @@ one:
 two:
   user_id: 1
   stylist_id: 1
-  shoes_id: 1
-  trousers_id: 1
+  shoe_id: 1
+  trouser_id: 1
   shirt_id: MyString
   integer_checked: 1
   type: 

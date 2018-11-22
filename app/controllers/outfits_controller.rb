@@ -80,7 +80,7 @@ class OutfitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def outfit_params
-      params.require(:outfit).permit(:user_id, :stylist_id, :shoes_id, :trousers_id, :shirt_id, :integer_checked, :type, :season, :name, :comment)
+      params.require(:outfit).permit(:user_id, :stylist_id, :shoe_id, :trouser_id, :shirt_id, :integer_checked, :type, :season, :name, :comment)
     end
 
 
