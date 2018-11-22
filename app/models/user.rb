@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :cloths
   has_many :outfits
-  # has_many :stylist , :class_name 'Outfit'
+  has_many :stylist , class_name: 'Outfit'
   before_save :encrypt_password
   attr_accessor :password , :password_confirmation
 

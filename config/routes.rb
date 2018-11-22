@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   post 'sessions/create', to: 'sessions#create', as: 'login'
   get 'sessions/destroy', to: 'sessions#destroy', as: 'logout'
 
-  post 'outfits/set_checked', to: 'outfits#set_checked', as: 'verify'
+  # post 'outfits/set_checked', to: 'outfits#set_checked', as: 'verify'
   resources :outfits do
-    # post 'set_checked', to: 'outfits#set_checked' , on: :collection
+    post 'set_checked', to: 'outfits#set_checked' , on: :collection, as: 'verify'
   end
   resources :cloths
   resources :users
