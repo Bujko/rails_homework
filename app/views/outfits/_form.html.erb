@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.hidden_field :user_id, :value => session[:user] %>
   </div>
 
   <div class="field">
@@ -22,28 +21,27 @@
   </div>
 
   <div class="field">
-    <%= form.label :shoes_id %>
-    <%= form.number_field :shoes_id %>
+    <%= form.label :shoe_id %>
+    <%= form.number_field :shoe_id %>
   </div>
 
   <div class="field">
-    <%= form.label :trousers_id %>
-    <%= form.number_field :trousers_id %>
+    <%= form.label :trouser_id %>
+    <%= form.number_field :trouser_id %>
   </div>
 
   <div class="field">
     <%= form.label :shirt_id %>
-    <%= form.text_field :shirt_id %>
+    <%= form.number_field :shirt_id %>
   </div>
 
   <div class="field">
-    <%= form.label :integer_checked %>
-    <%= form.number_field :integer_checked %>
+      <%= form.hidden_field :integer_checked, :value => 0 %>
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.label :outfit_type %>
+    <%= form.text_field :outfit_type %>
   </div>
 
   <div class="field">

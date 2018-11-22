@@ -1,10 +1,17 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
+  include ApplicationHelper
+
   # GET /outfits
   # GET /outfits.json
   def index
-    @outfits = Outfit.all
+    # @outfits = Outfit.all
+    if is_user?
+      @outfits = Outfit.where(" integer_checked = ? ", 1 )
+    elsif !is_user?
+      @outfits = Outfit.where(" integer_checked = ? AND stylist_id = ? ", 0,  session['user'])
+    end
   end
 
   # GET /outfits/1
@@ -61,6 +68,10 @@ class OutfitsController < ApplicationController
     end
   end
 
+  def set_checked
+      @outfit.update(params[:id], :integer_checked => 1)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
@@ -71,4 +82,6 @@ class OutfitsController < ApplicationController
     def outfit_params
       params.require(:outfit).permit(:user_id, :stylist_id, :shoes_id, :trousers_id, :shirt_id, :integer_checked, :type, :season, :name, :comment)
     end
+
+
 end

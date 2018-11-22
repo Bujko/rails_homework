@@ -12,12 +12,12 @@
 
 <p>
   <strong>Shoes:</strong>
-  <%= @outfit.shoes_id %>
+  <%= @outfit.shoe_id %>
 </p>
 
 <p>
   <strong>Trousers:</strong>
-  <%= @outfit.trousers_id %>
+  <%= @outfit.trouser_id %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @outfit.type %>
+  <%= @outfit.outfit_type %>
 </p>
 
 <p>
@@ -52,3 +52,4 @@
 
 <%= link_to 'Edit', edit_outfit_path(@outfit) %> |
 <%= link_to 'Back', outfits_path %>
+<%= link_to 'Agree',verify_path(@outfit) %>
