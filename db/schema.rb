@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 2018_11_22_075941) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "shoes", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trousers", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "outfits", force: :cascade do |t|
     t.integer "user_id"
     t.integer "stylist_id"

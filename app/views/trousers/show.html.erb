@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @trouser.user_id %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @trouser.picture %>
+</p>
+
+<%= link_to 'Edit', edit_trouser_path(@trouser) %> |
+<%= link_to 'Back', trousers_path %>

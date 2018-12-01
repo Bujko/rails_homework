@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-cloth_one:
+shoe_one:
   user_id: user
-  picture: Ruha1
+  picture: Cipo1
 
-cloth_two:
+shoe_one:
   user_id: user
-  picture: Ruha2
+  picture: Cipo2

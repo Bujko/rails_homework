@@ -25,3 +25,11 @@ Set
 	Trouser_id
 	Shirt_id
 	Checked
+
+	How to add value to instance variable?
+
+	How to write route to make database cjhnage for set_outfits
+
+	How to connect table
+
+	How to write out clothes in outfits

@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   has_many :cloths
+  has_many :trousers
+  has_many :shoes
   has_many :outfits
+  has_many :outfits, :foreign_key => :stylist_id
   has_many :stylist , class_name: 'Outfit'
   before_save :encrypt_password
   attr_accessor :password , :password_confirmation

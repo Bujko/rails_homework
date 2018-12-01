@@ -1,25 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 1
-  stylist_id: 1
-  shoe_id: 1
-  trouser_id: 1
-  shirt_id: MyString
-  integer_checked: 1
-  type: 
-  season: MyString
-  name: MyString
-  comment: MyString
-
-two:
-  user_id: 1
-  stylist_id: 1
-  shoe_id: 1
-  trouser_id: 1
-  shirt_id: MyString
-  integer_checked: 1
-  type: 
-  season: MyString
-  name: MyString
-  comment: MyString
+  user_id: user
+  stylist_id: stylist
+  shoe_id: shoe_one
+  trouser_id: trouser_one
+  cloth_id: cloth_one
+  integer_checked: 0
+  type: Elegans
+  season: Teli
+  name: Szinhazi
+  comment: Komment
