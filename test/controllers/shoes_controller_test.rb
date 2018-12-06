@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ShoesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @shoe = shoes(:one)
+    @shoe = shoes(:shoe_one)
   end
 
   test "should get index" do

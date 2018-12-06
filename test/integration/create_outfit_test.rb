@@ -22,8 +22,8 @@ class CreateOutfitTest < ActionDispatch::IntegrationTest
     get url_for(controller: 'outfits', action: 'new')
     assert_response :success
 
-    post url_for(controller: 'outfits', action: 'create'), params: { user_id: @u.id, stylist_id: @sty.id, shoe_id: @s.id, trouser_id: @t.id, cloth_id: @c.id}, headers: { "HTTP_REFERER": url_for(controller: 'say', action: 'hello') }
-    assert_select 'a', "Edit"
+
+    post url_for(controller: 'outfits', action: 'create'), params: { outfit: {user_id: @u.id, stylist_id: @sty.id, shoe_id: @s.id, trouser_id: @t.id, cloth_id: @c.id, integer_checked: 0, outfit_type: "alma", season: "alma", name: "alma", comment: "No comment"}} ,headers: { "HTTP_REFERER": url_for(controller: 'outfits', action: 'new') }
 
     get url_for(controller: 'sessions', action: 'destroy')
     assert_nil session[:user]

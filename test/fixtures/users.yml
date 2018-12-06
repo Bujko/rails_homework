@@ -3,13 +3,13 @@
 user:
   name: User
   email: user@mail.hu
-  encrypted_password: <% Digest::SHA1.hexdigest 'salt' + 'peanut' %>
+  encrypted_password: <%= Digest::SHA1.hexdigest("salt"+"peanut")%>
   salt: salt
   usertype: 0
 
 stylist:
   name: Stylist
   email: stylist@mail.hu
-  encrypted_password: <% Digest::SHA1.hexdigest 'salt' + 'peanut' %>
+  encrypted_password: <%= Digest::SHA1.hexdigest( 'salt' + 'peanut' )%>
   salt: salt
   usertype: 1

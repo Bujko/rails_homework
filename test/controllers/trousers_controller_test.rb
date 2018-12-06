@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TrousersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @trouser = trousers(:one)
+    @trouser = trousers(:trouser_one)
   end
 
   test "should get index" do

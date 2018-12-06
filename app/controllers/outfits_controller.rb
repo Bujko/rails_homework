@@ -70,7 +70,7 @@ class OutfitsController < ApplicationController
 
   def set_checked
       #@outfit.update_attribute(:integer_checked, 1)
-      Outfit.where(id: params[:outfitid]).update_all(integer_checked: 1)
+      Outfit.where(id: params[:id]).update_all(integer_checked: 1)
       #@outfit = Outfit.update(params[:outfitid], :integer_checked => 1)
       #@outfit.save
   end
@@ -83,7 +83,7 @@ class OutfitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def outfit_params
-      params.require(:outfit).permit(:user_id, :stylist_id, :shoe_id, :trouser_id, :cloth_id, :integer_checked, :outfit_type, :season, :name, :comment, :outfitid)
+        params.require(:outfit).permit( :user_id, :stylist_id, :shoe_id, :trouser_id, :cloth_id, :integer_checked, :outfit_type, :season, :name, :comment, :outfitid)
     end
 
 

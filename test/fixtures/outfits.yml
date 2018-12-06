@@ -7,7 +7,7 @@ one:
   trouser_id: trouser_one
   cloth_id: cloth_one
   integer_checked: 0
-  type: Elegans
+  outfit_type: Elegans
   season: Teli
   name: Szinhazi
   comment: Komment
